@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>form</title>
+        <link rel="stylesheet"href="index.css">
+    </head>
+    <body>
+        <h1 style="margin-left: 500px ;">REGISTERATION FORM</h1>
+        <div class="main">
+            <div class="main1">
+                <div style="margin-top: 10px;">Name:</div>
+                <input class="style1" type="text" placeholder="Enter Your First Name" id="name"/>
+                
+
+            </div>
+            <div class="main1">
+                <div style="margin-top: 10px;">Age:</div>
+                <input class="style2" id="Age" type="number"placeholder="Enter Your Age"/>
+                
+                
+            </div>
+            
+            </select>
+            <div class="main1">
+                <div style="margin-top: 10px;">Place:</div>
+                <select class="style4" id="city">
+                    <option value="TVM">TVM</option>
+                    <option value="Kochi">kochi</option>
+                    <option value="kozhikode">kozhikode</option>
+    
+                </select>
+                
+                
+            </div>
+            <div class="main1">
+                <div style="margin-top: 10px;">Gender:</div>
+                <p style="margin-top: 10px;margin-left: 20px;">Male<input name="gender" id="Male" value="Male" type="radio"/></p>
+                <p style="margin-top: 10px;margin-left: 20px;">Female<input name="gender" id="Female" value="Female" type="radio"/></p>
+                
+            </div>
+            <div class="main1">
+                <div style="margin-top: 10px;">Education:</div>
+                <p style="margin-top: 10px;margin-left: 20px;">10th<input name="qualification" id="10th"value="10th" type="checkbox"/></p>
+                <p style="margin-top: 10px;margin-left: 20px;">+2<input name="qualification" id="+2"value="+2" type="checkbox"/></p>
+                <p style="margin-top: 10px;margin-left: 20px;">Degree<input name="qualification" id="Degree" value="Degree"type="checkbox"/></p>
+            </div>
+            <div class="main1">
+                <button class="but" onclick="onSubmit()">submit</button>
+                
+            </div>
+        </div>
+        
+    <script>
+       
+        function onSubmit(){
+            var name=document.getElementById("name").value;
+            var Age=document.getElementById("Age").value;
+
+
+
+var city=document.getElementById("city").value;
+            
+
+            if(document.getElementById("Male").checked){
+               var gender="Male"
+            }
+            else if(document.getElementById("Female").checked){
+                gender="Female"
+            }
+            else{
+                alert("please select gender")
+            }
+ if(document.getElementById("10th").checked){
+    var qualification="10th"
+ }
+ else if(document.getElementById("+2").checked){
+    qualification="+2"
+ }
+ else if(document.getElementById("Degree").checked){
+    qualification="Degree"
+ }
+else{(document.getElementById("10th"))
+
+qualification="10th"
+}
+
+            console.log("Name  : "+name);
+            console.log("Age  : "+Age)
+            console.log("City  : "+city)
+            console.log("gender  : "+gender)
+            console.log("Qualification  : "+qualification)
+
+        }
+    </script>        
+           
+        
+    </body>
+</html>
